@@ -1,4 +1,4 @@
 SQBlog
 ======
 
-Blog Using ASP.NET MVC, and a demostation on BDDD Library.
+Blog Using ASP.NET MVC, WCF, DDD pattern (using BDDD library)
