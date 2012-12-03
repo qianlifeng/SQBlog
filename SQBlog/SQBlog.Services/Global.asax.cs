@@ -1,33 +1,28 @@
 ﻿using System;
-using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FluentNHibernate.Cfg;
-using FluentNHibernate.Conventions.Helpers;
-using SQBlog.Repository.NHibernate.FluentNHibernateMap;
-using NHibernate.Tool.hbm2ddl;
-using NHibernate.Cfg;
+using System.Web;
+using System.Web.Security;
+using System.Web.SessionState;
 using BDDD.Config;
 using BDDD.Application;
-using BDDD.Repository.NHibernate;
-using SQBlog.Domain.Repository;
+using Microsoft.Practices.Unity;
 using SQBlog.Application;
 using SQBlog.Application.Implementation;
-using SQBlog.Repository.NHibernate;
-using Microsoft.Practices.Unity;
 using BDDD.Repository;
-using BDDD.ObjectContainer;
-using SQBlog.Domain.Model;
-using SQBlog.Infrastructure;
+using BDDD.Repository.NHibernate;
+using FluentNHibernate.Cfg;
+using FluentNHibernate.Conventions.Helpers;
+using NHibernate.Cfg;
+using SQBlog.Repository.NHibernate.FluentNHibernateMap;
+using SQBlog.Domain.Repository;
+using SQBlog.Repository.NHibernate;
 
-namespace SQBlog.UnitTest
+namespace SQBlog.Services
 {
-    [TestClass]
-    public class DBGenerate
+    public class Global : System.Web.HttpApplication
     {
-        [ClassInitialize]
-        public static void InitApp(TestContext context)
+        protected void Application_Start(object sender, EventArgs e)
         {
             IConfigSource configSource = new AppConfigSource();
             App application = AppRuntime.Create(configSource);
@@ -35,7 +30,7 @@ namespace SQBlog.UnitTest
             application.Start();
         }
 
-        static void application_AppInitEvent(IConfigSource source, BDDD.ObjectContainer.IObjectContainer objectContainer)
+        void application_AppInitEvent(IConfigSource source, BDDD.ObjectContainer.IObjectContainer objectContainer)
         {
             UnityContainer container = objectContainer.GetRealObjectContainer<UnityContainer>();
 
@@ -53,7 +48,7 @@ namespace SQBlog.UnitTest
         /// 获得数据库链接信息
         /// </summary>
         /// <returns></returns>
-        static Configuration GetNHibernateConnnectInfo()
+        Configuration GetNHibernateConnnectInfo()
         {
             return Fluently.Configure()
                   .Database(
@@ -69,23 +64,34 @@ namespace SQBlog.UnitTest
                   .BuildConfiguration();
         }
 
-        [TestMethod]
-        public void CreateDB()
+        protected void Session_Start(object sender, EventArgs e)
         {
-            SchemaExport schemaExport = new SchemaExport(GetNHibernateConnnectInfo());
-            schemaExport.Execute(false, true, false);
 
-            CreateBlog();
         }
 
-        public void CreateBlog()
+        protected void Application_BeginRequest(object sender, EventArgs e)
         {
-            IRepositoryContext repositoryContext = ServiceLocator.Instance.GetService<IRepositoryContext>();
-            IBlogRepository blogRepository = ServiceLocator.Instance.GetService<IBlogRepository>();
 
-            Blog blog = new Blog("Scott Qian",string.Empty,"Default",DES.DesEncrypt("123456"));
-            blogRepository.Add(blog);
-            repositoryContext.Commit();
+        }
+
+        protected void Application_AuthenticateRequest(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Application_Error(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Session_End(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Application_End(object sender, EventArgs e)
+        {
+
         }
     }
 }

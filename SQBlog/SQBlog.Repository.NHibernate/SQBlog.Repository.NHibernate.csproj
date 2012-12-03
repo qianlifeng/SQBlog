@@ -34,6 +34,9 @@
     <Reference Include="BDDD">
       <HintPath>..\..\..\BDDD\BDDD\BDDD\bin\Debug\BDDD.dll</HintPath>
     </Reference>
+    <Reference Include="BDDD.Repository.NHibernate">
+      <HintPath>..\..\..\BDDD\BDDD\BDDD.Repository.NHibernate\bin\Debug\BDDD.Repository.NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="FluentNHibernate">
       <HintPath>..\packages\FluentNHibernate.1.3.0.733\lib\FluentNHibernate.dll</HintPath>
     </Reference>
@@ -51,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlogRepository.cs" />
     <Compile Include="FluentNHibernateMap\BlogMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

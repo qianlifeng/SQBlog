@@ -40,17 +40,17 @@ namespace SQBlog.Domain.Model
 
         #region - 方法 -
 
-        public void SetBlogTitle(string newTitle)
+        public virtual void SetBlogTitle(string newTitle)
         {
             Title = newTitle;
         }
 
-        public void SetBlogSubTitle(string subTitle)
+        public virtual void SetBlogSubTitle(string subTitle)
         {
             SubTitle = subTitle;
         }
 
-        public void SetBlogTheme(string themeName)
+        public virtual void SetBlogTheme(string themeName)
         {
             Theme = themeName;
         }
@@ -60,12 +60,12 @@ namespace SQBlog.Domain.Model
         /// </summary>
         /// <param name="pwd"></param>
         /// <returns></returns>
-        public bool CheckPassword(string pwd)
+        public virtual bool CheckPassword(string pwd)
         {
             return Password == pwd;
         }
 
-        public void ChangeBlogPassword(string pwd)
+        public virtual void ChangeBlogPassword(string pwd)
         {
             Password = pwd;
         }
@@ -80,7 +80,7 @@ namespace SQBlog.Domain.Model
             set;
         }
 
-        public bool Equals(IEntity other)
+        public virtual bool Equals(IEntity other)
         {
             return other.ID == ID;
         }

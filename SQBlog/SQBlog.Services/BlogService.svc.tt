@@ -1,0 +1,44 @@
+﻿<#@ template  debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core.dll" #>
+<#@ Assembly Name="System.Windows.Forms.dll" #>
+<#@ assembly name="System.ServiceModel.dll"#>
+<#@ assembly name="System.Runtime.Serialization.dll"#>
+<#@ Assembly Name="$(SolutionDir)SQBlog.Domain\bin\$(ConfigurationName)\SQBlog.Domain.dll" #>
+<#@ Assembly Name="$(SolutionDir)SQBlog.Application\bin\$(ConfigurationName)\SQBlog.Application.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@ import namespace="SQBlog.Application" #>
+<#@ import namespace="System.ServiceModel"#>
+<#@ include file="Common.tt"#>
+using System;
+using BDDD;
+using BDDD.ObjectContainer;
+using System.Collections.Generic;
+using SQBlog.Application;
+using SQBlog.Application.DTO;
+
+namespace SQBlog.Services
+{
+	public class BlogService : IBlogApplication
+	{
+		private readonly IBlogApplication blogApplicationImpl = ServiceLocator.Instance.GetService<IBlogApplication>();
+		<#foreach (MethodInfo method in typeof(IBlogApplication).GetMethods()) {#>
+		
+		public <#=GetMethodReturnType(method)#> <#=method.Name#>(<#=GetMethodParameterList(method)#>)
+		{
+			try
+			{
+				<#if(method.ReturnType != typeof(void)){#>return <#}#> blogApplicationImpl.<#=method.Name#>(<#=GetMethodParameterValueList(method)#>);
+			}
+			catch(Exception ex)
+			{
+				throw ApplicationFaultDetail.Create(ex);
+			}
+		}
+<#}#>
+	}
+}
