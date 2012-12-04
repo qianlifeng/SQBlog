@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BDDD">
-      <HintPath>..\..\..\BDDD\BDDD\BDDD\bin\Debug\BDDD.dll</HintPath>
+      <HintPath>..\packages\BDDD.dll</HintPath>
     </Reference>
     <Reference Include="BDDD.Repository.NHibernate">
-      <HintPath>..\..\..\BDDD\BDDD\BDDD.Repository.NHibernate\bin\Debug\BDDD.Repository.NHibernate.dll</HintPath>
+      <HintPath>..\packages\BDDD.Repository.NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="FluentNHibernate">
       <HintPath>..\packages\FluentNHibernate.1.3.0.733\lib\FluentNHibernate.dll</HintPath>

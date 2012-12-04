@@ -1,8 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Conventions.Helpers;
 using SQBlog.Repository.NHibernate.FluentNHibernateMap;
@@ -39,9 +35,9 @@ namespace SQBlog.UnitTest
         {
             UnityContainer container = objectContainer.GetRealObjectContainer<UnityContainer>();
 
-            container.RegisterType<INHibernateConfiguration, NHibernateConfiguration>(
+            container.RegisterType<INHibernateConfiguration, NHibernateConfiguration>(new ContainerControlledLifetimeManager(),
               new InjectionConstructor(GetNHibernateConnnectInfo()));
-            container.RegisterType<IRepositoryContext, NHibernateContext>(
+            container.RegisterType<IRepositoryContext, NHibernateContext>(new PerThreadLifetimeManager(),
                new InjectionConstructor(new ResolvedParameter<INHibernateConfiguration>()));
 
             //Application and Repository
