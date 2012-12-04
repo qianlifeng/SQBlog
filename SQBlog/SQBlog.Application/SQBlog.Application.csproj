@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BDDD">
-      <HintPath>..\..\..\BDDD\BDDD\BDDD\bin\Debug\BDDD.dll</HintPath>
+      <HintPath>..\packages\BDDD.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core">
-      <HintPath>..\..\..\BDDD\BDDD\BDDD\bin\Debug\Castle.Core.dll</HintPath>
+      <HintPath>..\packages\Castle.Core.3.1.0\lib\net35\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,7 +51,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQBlogException.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SQBlog.Application.DTO\SQBlog.Application.DTO.csproj">
       <Project>{AFD789FF-85AF-4AE0-BD34-C21E2E8538A9}</Project>
