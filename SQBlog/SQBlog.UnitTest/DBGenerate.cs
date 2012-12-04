@@ -25,50 +25,14 @@ namespace SQBlog.UnitTest
         [ClassInitialize]
         public static void InitApp(TestContext context)
         {
-            IConfigSource configSource = new AppConfigSource();
-            App application = AppRuntime.Create(configSource);
-            application.AppInitEvent += new App.AppInitHandle(application_AppInitEvent);
-            application.Start();
+            Common.StartApp();
         }
 
-        static void application_AppInitEvent(IConfigSource source, BDDD.ObjectContainer.IObjectContainer objectContainer)
-        {
-            UnityContainer container = objectContainer.GetRealObjectContainer<UnityContainer>();
 
-            container.RegisterType<INHibernateConfiguration, NHibernateConfiguration>(new ContainerControlledLifetimeManager(),
-              new InjectionConstructor(GetNHibernateConnnectInfo()));
-            container.RegisterType<IRepositoryContext, NHibernateContext>(new PerThreadLifetimeManager(),
-               new InjectionConstructor(new ResolvedParameter<INHibernateConfiguration>()));
-
-            //Application and Repository
-            container.RegisterType<IBlogApplication, BlogApplication>();
-            container.RegisterType<IBlogRepository, BlogRepository>();
-        }
-
-        /// <summary>
-        /// 获得数据库链接信息
-        /// </summary>
-        /// <returns></returns>
-        static Configuration GetNHibernateConnnectInfo()
-        {
-            return Fluently.Configure()
-                  .Database(
-                      FluentNHibernate.Cfg.Db.MsSqlConfiguration.MsSql2008
-                          .ConnectionString(s => s.Server("localhost")
-                                  .Database("SQBlog")
-                                  .TrustedConnection())
-                                  .ShowSql()
-                  )
-                  .Mappings(m => m.FluentMappings.AddFromAssembly(typeof(BlogMap).Assembly)
-                      .Conventions.Add(ForeignKey.EndsWith("Id"))
-                      )
-                  .BuildConfiguration();
-        }
-
-        [TestMethod]
+        //[TestMethod]
         public void CreateDB()
         {
-            SchemaExport schemaExport = new SchemaExport(GetNHibernateConnnectInfo());
+            SchemaExport schemaExport = new SchemaExport(Common.GetNHibernateConnnectInfo());
             schemaExport.Execute(false, true, false);
 
             CreateBlog();

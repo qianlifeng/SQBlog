@@ -2,6 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQBlog.Web", "SQBlog.Web\SQBlog.Web.csproj", "{5E7162EA-2DCF-41AE-BDC0-FD1EAB091098}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BFB032AE-F06D-4015-A84A-84A5D454CB1F} = {BFB032AE-F06D-4015-A84A-84A5D454CB1F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQBlog.Domain", "SQBlog.Domain\SQBlog.Domain.csproj", "{F01C6701-5D5A-4B23-831F-A744802EC16E}"
 EndProject
@@ -12,13 +15,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQBlog.Repository.NHibernate", "SQBlog.Repository.NHibernate\SQBlog.Repository.NHibernate.csproj", "{DAE7E397-68D7-4B09-990C-0182BC1E86F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQBlog.UnitTest", "SQBlog.UnitTest\SQBlog.UnitTest.csproj", "{43DC5BBC-C1CA-4FEF-8D08-4C490558D887}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A48CCCB8-70FD-4EF8-8948-417C527D877B}"
-	ProjectSection(SolutionItems) = preProject
-		Local.testsettings = Local.testsettings
-		SQBlog.Web.vsmdi = SQBlog.Web.vsmdi
-		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQBlog.Services", "SQBlog.Services\SQBlog.Services.csproj", "{BFB032AE-F06D-4015-A84A-84A5D454CB1F}"
 EndProject
@@ -33,6 +29,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Web", "2.Web", "{8479B0FB-115B-44F9-B534-CE48336E0D3E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Test", "1.Test", "{12B55D5F-87EF-4693-9A03-1355EA49F4B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Solution Items", "0.Solution Items", "{970C12D6-4DB4-4D50-A62D-4921FF00B34E}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		SQBlog.Web.vsmdi = SQBlog.Web.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution

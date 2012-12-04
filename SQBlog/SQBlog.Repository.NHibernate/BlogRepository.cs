@@ -14,5 +14,11 @@ namespace SQBlog.Repository.NHibernate
         public BlogRepository(IRepositoryContext context)
             : base(context)
         { }
+
+
+        public Blog GetFirstItem()
+        {
+            return GetAll().FirstOrDefault();
+        }
     }
 }

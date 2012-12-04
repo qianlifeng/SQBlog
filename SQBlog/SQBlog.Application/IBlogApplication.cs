@@ -27,5 +27,29 @@ namespace SQBlog.Application
         [OperationContract]
         [FaultContract(typeof(ApplicationFaultDetail))]
         void ChangePassword(string oldPwd, string newPwd);
+
+        /// <summary>
+        /// 修改博客标题
+        /// </summary>
+        /// <param name="title">标题名称</param>
+        [OperationContract]
+        [FaultContract(typeof(ApplicationFaultDetail))]
+        void ChangeTitle(string title);
+
+        /// <summary>
+        /// 修改博客副标题
+        /// </summary>
+        /// <param name="subTitle">副标题</param>
+        [OperationContract]
+        [FaultContract(typeof(ApplicationFaultDetail))]
+        void ChangeSubTitle(string subTitle);
+
+        /// <summary>
+        /// 修改博客主题
+        /// </summary>
+        /// <param name="theme">博客主题名称</param>
+        [OperationContract]
+        [FaultContract(typeof(ApplicationFaultDetail))]
+        void ChangeTheme(string theme);
     }
 }
