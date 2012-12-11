@@ -29,7 +29,7 @@ namespace SQBlog.UnitTest
         }
 
 
-        //[TestMethod]
+        [TestMethod]
         public void CreateDB()
         {
             SchemaExport schemaExport = new SchemaExport(Common.GetNHibernateConnnectInfo());

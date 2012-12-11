@@ -1,0 +1,10 @@
+body
+{
+    background-image:url(../Images/bg.png);
+}
+.artile-container
+{
+    background-color:white;
+    margin-bottom:10px;
+    padding:3px;
+}

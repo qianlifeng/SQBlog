@@ -4,38 +4,70 @@
         <meta charset="utf-8">
         <title>Scott Qian</title>
         <link href="Assets/Css/bootstrap.css" rel="stylesheet" media="screen">
+        <link href="Assets/Css/main.css" rel="stylesheet" media="screen">
     </head>
     <body>
         <div class="navbar navbar-fixed-top navbar-inverse">
             <div class="navbar-inner">
                 <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" style="color:white;" href="#">Scott Qian</a>
                     <ul class="nav">
                         <li><a href="#">Article</a></li>
                         <li><a href="#">About me</a></li>
+                        <li><a href="#">Contact me</a></li>
                     </ul>
                     <ul class="nav pull-right">
-                        <li><a href="#">链接</a></li>
-                        <li class="divider-vertical"></li>
-                        <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉 <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">动作</a></li>
-                            <li><a href="#">另一个动作</a></li>
-                            <li><a href="#">其他动作</a></li>
-                            <li class="divider"></li>
-                            <li class="nav-header">导航头</li>
-                            <li><a href="#">被间隔的链接</a></li>
-                            <li><a href="#">另一个链接</a></li>
-                        </ul>
-                        </li>
+                        <li><a href="#">Login</a></li>
                     </ul>                    
+                </div>
+            </div>
+        </div>
+        <div class="navbar-placeholder" style="height:60px;"></div>
+        <div class="container">
+            <div class="row">
+                <div class="span8 offset1">
+                    <div class="artile-container">
+                        <div class="artile-title">
+                            <b>Article 1</b>
+                        </div>
+                        <div class="artile-content">
+                            Article content 1
+                        </div>
+                        <div class="artile-category">
+                            <i class="icon-briefcase"></i>
+                            <a href="#">Category1</a>
+                        </div>
+                        <div class="artile-tag">
+                            <i class="icon-tag"></i> 
+                            <a href="#" >tag1</a>,
+                            <a href="#" >tag1</a>,
+                            <a href="#" >tag1</a>
+                        </div>
+                    </div> 
+                    <div class="pagination pagination-right">
+                        <ul>
+                            <li class="active"><a href="#">前一页</a></li>
+                            <li class="active"> <a href="#">1</a> </li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">后一页</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="hero-unit" ></div> 
                 </div>
             </div>
         </div>
     </body>
     <!--引用JS-->
-    <script src="Assets/Scripts/jquery-1.5.1.js"></script>
-    <script src="Assets/Scripts/boostrap.js"></script>
-    <script src="Assets/Scripts/boostrap-dropdown.js"></script>
+    <script src="Assets/Scripts/jquery-1.8.3.min.js"></script>
+    <script src="Assets/Scripts/bootstrap.js"></script>
 </html>
 
