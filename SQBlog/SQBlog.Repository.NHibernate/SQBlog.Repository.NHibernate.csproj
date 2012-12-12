@@ -55,7 +55,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlogRepository.cs" />
+    <Compile Include="FluentNHibernateMap\ArticleMap.cs" />
     <Compile Include="FluentNHibernateMap\BlogMap.cs" />
+    <Compile Include="FluentNHibernateMap\CategoryMap.cs" />
+    <Compile Include="FluentNHibernateMap\TagMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

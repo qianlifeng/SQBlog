@@ -97,5 +97,7 @@ namespace SQBlog.UnitTest
 
             blogApplicationImpl.ChangeTheme("Default");
         }
+
+
     }
 }

@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationFaultDetail.cs" />
+    <Compile Include="ArticleDTO.cs" />
     <Compile Include="BlogDTO.cs" />
     <Compile Include="IDataTransferObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

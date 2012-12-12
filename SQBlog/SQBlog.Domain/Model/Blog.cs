@@ -22,6 +22,7 @@ namespace SQBlog.Domain.Model
         /// </summary>
         public virtual string Password { get; protected set; }
 
+
         #endregion
 
         #region - 构造函数 -
@@ -70,6 +71,7 @@ namespace SQBlog.Domain.Model
             Password = pwd;
         }
 
+     
         #endregion
 
         #region IAggregateRoot 接口

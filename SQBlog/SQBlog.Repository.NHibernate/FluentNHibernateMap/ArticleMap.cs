@@ -2,20 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using FluentNHibernate.Mapping;
 using SQBlog.Domain.Model;
+using FluentNHibernate.Mapping;
 
 namespace SQBlog.Repository.NHibernate.FluentNHibernateMap
 {
-    public class BlogMap : ClassMap<Blog>
+    public class ArticleMap : ClassMap<Article>
     {
-        public BlogMap()
+
+        public ArticleMap()
         {
             Id(m => m.ID).GeneratedBy.Guid();
             Map(m => m.Title).Not.Nullable();
-            Map(m => m.SubTitle);
-            Map(m => m.Theme);
-            Map(m => m.Password).Not.Nullable();
+            Map(m => m.Content);
+            Map(m => m.ContentBio);
+            Map(m => m.PublishDate);
+            Map(m => m.LastEditDate);
+            References(m => m.Category);
         }
     }
 }

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IArticleApplication.cs" />
     <Compile Include="IBlogApplication.cs" />
     <Compile Include="Implementation\BlogApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -21,7 +21,7 @@ namespace SQBlog.UnitTest
     public class Common
     {
         public static void StartApp()
-        { 
+        {
             IConfigSource configSource = new AppConfigSource();
             App application = AppRuntime.Create(configSource);
             application.AppInitEvent += new App.AppInitHandle(application_AppInitEvent);
@@ -52,9 +52,14 @@ namespace SQBlog.UnitTest
             return Fluently.Configure()
                   .Database(
                       FluentNHibernate.Cfg.Db.MsSqlConfiguration.MsSql2008
-                          .ConnectionString(s => s.Server("182.16.3.18")
-                                  .Database("a0216215226")
-                                  .Username("a0216215226").Password("scott"))
+                          .ConnectionString(s =>
+                                    s.Server("localhost")
+                                    .Database("SQBlog")
+                                    .TrustedConnection()
+                //s.Server("182.16.3.18")
+                //.Database("a0216215226")
+                //.Username("a0216215226").Password("scott")
+                                  )
                                   .ShowSql()
                   )
                   .Mappings(m => m.FluentMappings.AddFromAssembly(typeof(BlogMap).Assembly)

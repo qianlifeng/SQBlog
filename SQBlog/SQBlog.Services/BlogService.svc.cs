@@ -37,5 +37,41 @@ namespace SQBlog.Services
 				throw ApplicationFaultDetail.Create(ex);
 			}
 		}
+		
+		public void ChangeTitle(String title)
+		{
+			try
+			{
+				 blogApplicationImpl.ChangeTitle(title);
+			}
+			catch(Exception ex)
+			{
+				throw ApplicationFaultDetail.Create(ex);
+			}
+		}
+		
+		public void ChangeSubTitle(String subTitle)
+		{
+			try
+			{
+				 blogApplicationImpl.ChangeSubTitle(subTitle);
+			}
+			catch(Exception ex)
+			{
+				throw ApplicationFaultDetail.Create(ex);
+			}
+		}
+		
+		public void ChangeTheme(String theme)
+		{
+			try
+			{
+				 blogApplicationImpl.ChangeTheme(theme);
+			}
+			catch(Exception ex)
+			{
+				throw ApplicationFaultDetail.Create(ex);
+			}
+		}
 	}
 }
