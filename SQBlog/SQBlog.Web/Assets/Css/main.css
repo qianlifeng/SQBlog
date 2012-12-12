@@ -2,9 +2,38 @@ body
 {
     background-image:url(../Images/bg.png);
 }
-.artile-container
+.article-container
 {
     background-color:white;
-    margin-bottom:10px;
-    padding:3px;
+    margin-bottom:20px;
+}
+.article-summary-info
+{
+    padding:20px 10px 10px 20px;
+}
+.article-title-content
+{
+    padding:10px 10px 10px 0;
+}
+.article-continueRead
+{
+    line-height:30px;
+    padding:20px 10px 10px 0;
+}
+.article-category
+{
+    margin-top:10px;
+    height:30px;
+    line-height:30px;
+}
+.article-tag
+{
+    height:30px;
+    line-height:30px;
+}
+.article-time abbr
+{
+    height:30px;
+    line-height:30px;
+    color:#999;
 }
