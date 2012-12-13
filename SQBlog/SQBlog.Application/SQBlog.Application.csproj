@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="IArticleApplication.cs" />
     <Compile Include="IBlogApplication.cs" />
+    <Compile Include="ICategoryApplication.cs" />
+    <Compile Include="Implementation\ArticleApplication.cs" />
     <Compile Include="Implementation\BlogApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQBlogException.cs" />

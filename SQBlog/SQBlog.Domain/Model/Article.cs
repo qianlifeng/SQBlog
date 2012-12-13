@@ -19,15 +19,22 @@ namespace SQBlog.Domain.Model
         public virtual DateTime PublishDate { get; protected set; }
         public virtual DateTime LastEditDate { get; protected set; }
 
+        public virtual bool Private { get; protected set; }
+        public virtual bool IsDraft { get; protected set; }
+        /// <summary>
+        /// 被喜欢次数
+        /// </summary>
+        public virtual int LoveCount { get; protected set; }
         public virtual Category Category { get; protected set; }
         public virtual IList<Tag> Tags {get;protected set;}
 
         #endregion
 
         public Article() { }
-        public Article(string title,string content,string contentBio)
+        public Article(string title,string content,string contentBio,bool isPrivate)
         {
             Title =  title;
+            Private = isPrivate;
             Content = content;
             ContentBio = contentBio;
             LastEditDate = PublishDate = DateTime.Now;
@@ -58,6 +65,14 @@ namespace SQBlog.Domain.Model
             if (t == null) throw new ArgumentException("当前文章中不存在 {0} 标签", tag.Name);
 
             Tags.Remove(t);
+        }
+
+        /// <summary>
+        /// 将文章变为私有的，不对外发布
+        /// </summary>
+        public virtual void MakePrivate()
+        {
+            Private = true;
         }
 
         #endregion

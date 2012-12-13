@@ -53,12 +53,12 @@ namespace SQBlog.UnitTest
                   .Database(
                       FluentNHibernate.Cfg.Db.MsSqlConfiguration.MsSql2008
                           .ConnectionString(s =>
-                                    s.Server("localhost")
-                                    .Database("SQBlog")
-                                    .TrustedConnection()
-                //s.Server("182.16.3.18")
-                //.Database("a0216215226")
-                //.Username("a0216215226").Password("scott")
+                              //  s.Server("localhost")
+                              // .Database("SQBlog")
+                              // .TrustedConnection()
+                s.Server("scottqian.net")
+                .Database("SQBlog")
+                .Username("scottqian").Password("scottqian")
                                   )
                                   .ShowSql()
                   )

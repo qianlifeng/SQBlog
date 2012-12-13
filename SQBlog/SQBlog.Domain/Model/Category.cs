@@ -28,6 +28,16 @@ namespace SQBlog.Domain.Model
 
         #endregion
 
+        public virtual void ChangeName(string newName)
+        {
+            Name = newName;
+        }
+
+        public virtual void ChangeDescription(string desc)
+        {
+            Description = desc;
+        }
+
         #region IAggregateRoot 接口
 
         public virtual Guid ID

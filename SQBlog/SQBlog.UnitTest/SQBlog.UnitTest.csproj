@@ -75,6 +75,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArticleApplicationTest.cs" />
     <Compile Include="BlogApplicationTest.cs" />
     <Compile Include="Common.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

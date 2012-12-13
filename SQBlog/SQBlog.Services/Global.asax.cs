@@ -42,6 +42,8 @@ namespace SQBlog.Services
             //Application and Repository
             container.RegisterType<IBlogApplication, BlogApplication>();
             container.RegisterType<IBlogRepository, BlogRepository>();
+            container.RegisterType<IArticleApplication, ArticleApplication>();
+            container.RegisterType<IArticleRepository, ArticleRepository>();
         }
 
         /// <summary>
