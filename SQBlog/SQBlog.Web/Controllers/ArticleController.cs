@@ -6,10 +6,11 @@ using System.Web.Mvc;
 
 namespace SQBlog.Web.Controllers
 {
-    public class BlogController : Controller
+    public class ArticleController : Controller
     {
         //
-        // GET: /Blog/
+        // GET: /Article/
+
         public ActionResult Index()
         {
             return View();
