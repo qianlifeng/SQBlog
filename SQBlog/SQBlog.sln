@@ -1,11 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQBlog.Web", "SQBlog.Web\SQBlog.Web.csproj", "{5E7162EA-2DCF-41AE-BDC0-FD1EAB091098}"
-	ProjectSection(ProjectDependencies) = postProject
-		{BFB032AE-F06D-4015-A84A-84A5D454CB1F} = {BFB032AE-F06D-4015-A84A-84A5D454CB1F}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQBlog.Domain", "SQBlog.Domain\SQBlog.Domain.csproj", "{F01C6701-5D5A-4B23-831F-A744802EC16E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQBlog.Infrastructure", "SQBlog.Infrastructure\SQBlog.Infrastructure.csproj", "{A6CAEDAF-A9B3-4D9B-8925-1980FE804DF7}"
@@ -37,6 +32,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Solution Items", "0.Solut
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQBlog.Web", "SQBlog.Web\SQBlog.Web.csproj", "{06ACD718-8362-41FF-BFF7-1D398D4175A8}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = SQBlog.Web.vsmdi
@@ -46,10 +43,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5E7162EA-2DCF-41AE-BDC0-FD1EAB091098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5E7162EA-2DCF-41AE-BDC0-FD1EAB091098}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5E7162EA-2DCF-41AE-BDC0-FD1EAB091098}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5E7162EA-2DCF-41AE-BDC0-FD1EAB091098}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F01C6701-5D5A-4B23-831F-A744802EC16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F01C6701-5D5A-4B23-831F-A744802EC16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F01C6701-5D5A-4B23-831F-A744802EC16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -78,12 +71,15 @@ Global
 		{AFD789FF-85AF-4AE0-BD34-C21E2E8538A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFD789FF-85AF-4AE0-BD34-C21E2E8538A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFD789FF-85AF-4AE0-BD34-C21E2E8538A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06ACD718-8362-41FF-BFF7-1D398D4175A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06ACD718-8362-41FF-BFF7-1D398D4175A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06ACD718-8362-41FF-BFF7-1D398D4175A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06ACD718-8362-41FF-BFF7-1D398D4175A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{5E7162EA-2DCF-41AE-BDC0-FD1EAB091098} = {8479B0FB-115B-44F9-B534-CE48336E0D3E}
 		{F01C6701-5D5A-4B23-831F-A744802EC16E} = {102A6BF6-A5A1-4CE8-B136-9473186BC7E3}
 		{DAE7E397-68D7-4B09-990C-0182BC1E86F9} = {0BD5B16F-89F1-42A0-B290-71126D03E258}
 		{A6CAEDAF-A9B3-4D9B-8925-1980FE804DF7} = {0BD5B16F-89F1-42A0-B290-71126D03E258}
@@ -91,6 +87,7 @@ Global
 		{AFD789FF-85AF-4AE0-BD34-C21E2E8538A9} = {379A0F42-06F1-4E2E-A553-5FD4FDFD5AC4}
 		{E0890B0D-EFC4-48E7-8CB0-0EBF78965FEC} = {379A0F42-06F1-4E2E-A553-5FD4FDFD5AC4}
 		{43DC5BBC-C1CA-4FEF-8D08-4C490558D887} = {12B55D5F-87EF-4693-9A03-1355EA49F4B7}
+		{06ACD718-8362-41FF-BFF7-1D398D4175A8} = {8479B0FB-115B-44F9-B534-CE48336E0D3E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35

@@ -1,0 +1,70 @@
+body
+{
+    background-image:url(../Images/bg.png);
+}
+
+
+/**
+* @brief Common css
+*/
+.div-container
+{
+    background-color:white;
+    margin-bottom:20px;
+    border:none;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+
+
+/**
+* @brief article panes in the default page
+*/
+.article-summary-info
+{
+    padding:20px 10px 10px 20px;
+}
+.article-summary-info img
+{
+    width:128px;
+}
+.article-title-content
+{
+    padding:10px 10px 10px 0;
+}
+.article-continueRead
+{
+    line-height:30px;
+    padding:20px 10px 10px 0;
+}
+.article-category
+{
+    margin-top:10px;
+    height:30px;
+    line-height:30px;
+}
+.article-tag
+{
+    height:30px;
+    line-height:30px;
+}
+.article-time abbr
+{
+    height:30px;
+    line-height:30px;
+    color:#999;
+}
+
+
+/**
+* @brief widget panes in the default page
+*/
+.widget
+{
+    padding:10px;
+}
+.widget>.widget-title
+{
+    border-bottom:1px solid #ccc;
+    margin-bottom:3px;
+    padding-bottom:3px;
+}
