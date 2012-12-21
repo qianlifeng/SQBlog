@@ -10,6 +10,5 @@ namespace SQBlog.Application
     public interface ICategoryApplication
     {
 
-        CategoryDTO
     }
 }

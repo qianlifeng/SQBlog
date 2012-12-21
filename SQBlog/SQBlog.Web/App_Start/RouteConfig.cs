@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Microsoft.AspNet.SignalR;
 
 namespace SQBlog.Web
 {
@@ -13,6 +14,7 @@ namespace SQBlog.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapHubs();
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
