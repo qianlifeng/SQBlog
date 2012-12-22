@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>json2</id>
     <version>1.0.2</version>
@@ -14,6 +14,5 @@ See http://www.JSON.org/
 
 This package implements JSON encoders/decoders in JavaScript.</description>
     <tags>json json2</tags>
-    <references />
   </metadata>
 </package>

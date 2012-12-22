@@ -15,8 +15,5 @@
     <dependencies>
       <dependency id="Newtonsoft.Json" version="4.5.4" />
     </dependencies>
-    <references>
-      <reference file="Microsoft.AspNet.SignalR.Core.dll" />
-    </references>
   </metadata>
 </package>

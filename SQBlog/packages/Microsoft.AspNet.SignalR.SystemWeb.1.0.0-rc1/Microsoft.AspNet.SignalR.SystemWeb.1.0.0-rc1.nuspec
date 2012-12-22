@@ -16,8 +16,5 @@
       <dependency id="Microsoft.AspNet.SignalR.Owin" version="1.0.0-rc1" />
       <dependency id="Microsoft.Owin.Host.SystemWeb" version="1.0.0-rc1" />
     </dependencies>
-    <references>
-      <reference file="Microsoft.AspNet.SignalR.SystemWeb.dll" />
-    </references>
   </metadata>
 </package>

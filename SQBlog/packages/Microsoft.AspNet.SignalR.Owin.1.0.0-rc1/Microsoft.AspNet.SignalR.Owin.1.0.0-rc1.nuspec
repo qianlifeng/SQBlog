@@ -16,8 +16,5 @@
       <dependency id="Microsoft.AspNet.SignalR.Core" version="1.0.0-rc1" />
       <dependency id="Owin" version="1.0" />
     </dependencies>
-    <references>
-      <reference file="Microsoft.AspNet.SignalR.Owin.dll" />
-    </references>
   </metadata>
 </package>

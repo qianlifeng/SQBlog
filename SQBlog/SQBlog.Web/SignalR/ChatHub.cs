@@ -10,7 +10,8 @@ namespace SQBlog.Web.SignalR
     {
         public void Send(string msg)
         {
-            Clients.All.addMessage(msg);
+            Clients.Caller.addCallerMessage(msg);
+            Clients.Others.addMessage(msg);
         }
     }
 }

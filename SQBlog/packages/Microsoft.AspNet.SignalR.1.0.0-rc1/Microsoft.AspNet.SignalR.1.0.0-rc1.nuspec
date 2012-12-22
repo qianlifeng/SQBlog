@@ -19,6 +19,5 @@
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.0" />
     </frameworkAssemblies>
-    <references />
   </metadata>
 </package>

@@ -15,8 +15,5 @@
       <dependency id="Owin" version="1.0" />
       <dependency id="Microsoft.Web.Infrastructure" version="1.0.0.0" />
     </dependencies>
-    <references>
-      <reference file="Microsoft.Owin.Host.SystemWeb.dll" />
-    </references>
   </metadata>
 </package>
